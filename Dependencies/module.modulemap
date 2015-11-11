@@ -1,0 +1,4 @@
+module Gamut [system] {
+    header "Gamut/gamut_swift.h"
+    export *
+}
