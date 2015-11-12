@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Spectrum'
-  s.version = '0.8'
+  s.version = '0.1'
   s.license = 'MIT'
   s.summary = 'POSIX Regular Expressions for Swift 2 (Linux ready)'
   s.homepage = 'https://github.com/Zewo/Spectrum'
