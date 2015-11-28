@@ -1,4 +1,4 @@
-// Spectrum.h
+// POSIXRegex.h
 //
 // The MIT License (MIT)
 //

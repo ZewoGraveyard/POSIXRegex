@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B00510A61BE97B7B001B3F26 /* Spectrum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B005109B1BE97B7B001B3F26 /* Spectrum.framework */; };
-		B00510F41BE9952D001B3F26 /* Spectrum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00510EA1BE9952D001B3F26 /* Spectrum.framework */; };
+		B00510A61BE97B7B001B3F26 /* POSIXRegex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B005109B1BE97B7B001B3F26 /* POSIXRegex.framework */; };
+		B00510F41BE9952D001B3F26 /* POSIXRegex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00510EA1BE9952D001B3F26 /* POSIXRegex.framework */; };
 		B00B2A3D1BF3E96400372163 /* gamut_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B00B2A3C1BF3E96400372163 /* gamut_swift.h */; };
 		B00B2A3E1BF3E96400372163 /* gamut_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B00B2A3C1BF3E96400372163 /* gamut_swift.h */; };
-		B00B2A441BF3E98F00372163 /* Spectrum.h in Headers */ = {isa = PBXBuildFile; fileRef = B00B2A411BF3E98F00372163 /* Spectrum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B00B2A451BF3E98F00372163 /* Spectrum.h in Headers */ = {isa = PBXBuildFile; fileRef = B00B2A411BF3E98F00372163 /* Spectrum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B00B2A4B1BF3E9E000372163 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B2A4A1BF3E9E000372163 /* Regex.swift */; };
-		B00B2A4C1BF3E9E000372163 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B2A4A1BF3E9E000372163 /* Regex.swift */; };
-		B00B2A4E1BF3F31A00372163 /* SpectrumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B2A4D1BF3F31A00372163 /* SpectrumTests.swift */; };
-		B00B2A4F1BF3F31A00372163 /* SpectrumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B2A4D1BF3F31A00372163 /* SpectrumTests.swift */; };
+		B0B0A4F51C09E841005E92B0 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0A4F11C09E839005E92B0 /* Regex.swift */; };
+		B0B0A4F61C09E841005E92B0 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0A4F11C09E839005E92B0 /* Regex.swift */; };
+		B0B0A4F71C09E848005E92B0 /* POSIXRegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0A4F41C09E839005E92B0 /* POSIXRegexTests.swift */; };
+		B0B0A4F81C09E849005E92B0 /* POSIXRegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0A4F41C09E839005E92B0 /* POSIXRegexTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,17 +35,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B005109B1BE97B7B001B3F26 /* Spectrum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spectrum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B00510A51BE97B7B001B3F26 /* SpectrumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectrumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B005109B1BE97B7B001B3F26 /* POSIXRegex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POSIXRegex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00510A51BE97B7B001B3F26 /* POSIXRegex.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POSIXRegex.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00510BE1BE97BB4001B3F26 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		B00510EA1BE9952D001B3F26 /* Spectrum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spectrum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B00510F31BE9952D001B3F26 /* SpectrumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectrumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00510EA1BE9952D001B3F26 /* POSIXRegex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POSIXRegex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00510F31BE9952D001B3F26 /* POSIXRegex.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POSIXRegex.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00B2A3C1BF3E96400372163 /* gamut_swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gamut_swift.h; sourceTree = "<group>"; };
-		B00B2A401BF3E98F00372163 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B00B2A411BF3E98F00372163 /* Spectrum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spectrum.h; sourceTree = "<group>"; };
-		B00B2A471BF3E99900372163 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B00B2A4A1BF3E9E000372163 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		B00B2A4D1BF3F31A00372163 /* SpectrumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectrumTests.swift; sourceTree = "<group>"; };
+		B0B0A4EF1C09E839005E92B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B0A4F01C09E839005E92B0 /* POSIXRegex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POSIXRegex.h; sourceTree = "<group>"; };
+		B0B0A4F11C09E839005E92B0 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		B0B0A4F31C09E839005E92B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B0A4F41C09E839005E92B0 /* POSIXRegexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSIXRegexTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00510A61BE97B7B001B3F26 /* Spectrum.framework in Frameworks */,
+				B00510A61BE97B7B001B3F26 /* POSIXRegex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00510F41BE9952D001B3F26 /* Spectrum.framework in Frameworks */,
+				B00510F41BE9952D001B3F26 /* POSIXRegex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				B00510B51BE97BB4001B3F26 /* Dependencies */,
-				B00B2A3F1BF3E98F00372163 /* Spectrum */,
-				B00B2A461BF3E99900372163 /* Spectrum Tests */,
+				B0B0A4EE1C09E839005E92B0 /* POSIXRegex */,
+				B0B0A4F21C09E839005E92B0 /* POSIXRegex Tests */,
 				B005109C1BE97B7B001B3F26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,10 +95,10 @@
 		B005109C1BE97B7B001B3F26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B005109B1BE97B7B001B3F26 /* Spectrum.framework */,
-				B00510A51BE97B7B001B3F26 /* SpectrumTests.xctest */,
-				B00510EA1BE9952D001B3F26 /* Spectrum.framework */,
-				B00510F31BE9952D001B3F26 /* SpectrumTests.xctest */,
+				B005109B1BE97B7B001B3F26 /* POSIXRegex.framework */,
+				B00510A51BE97B7B001B3F26 /* POSIXRegex.xctest */,
+				B00510EA1BE9952D001B3F26 /* POSIXRegex.framework */,
+				B00510F31BE9952D001B3F26 /* POSIXRegex.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,23 +120,23 @@
 			path = Gamut;
 			sourceTree = "<group>";
 		};
-		B00B2A3F1BF3E98F00372163 /* Spectrum */ = {
+		B0B0A4EE1C09E839005E92B0 /* POSIXRegex */ = {
 			isa = PBXGroup;
 			children = (
-				B00B2A401BF3E98F00372163 /* Info.plist */,
-				B00B2A411BF3E98F00372163 /* Spectrum.h */,
-				B00B2A4A1BF3E9E000372163 /* Regex.swift */,
+				B0B0A4EF1C09E839005E92B0 /* Info.plist */,
+				B0B0A4F01C09E839005E92B0 /* POSIXRegex.h */,
+				B0B0A4F11C09E839005E92B0 /* Regex.swift */,
 			);
-			path = Spectrum;
+			path = POSIXRegex;
 			sourceTree = "<group>";
 		};
-		B00B2A461BF3E99900372163 /* Spectrum Tests */ = {
+		B0B0A4F21C09E839005E92B0 /* POSIXRegex Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B00B2A471BF3E99900372163 /* Info.plist */,
-				B00B2A4D1BF3F31A00372163 /* SpectrumTests.swift */,
+				B0B0A4F31C09E839005E92B0 /* Info.plist */,
+				B0B0A4F41C09E839005E92B0 /* POSIXRegexTests.swift */,
 			);
-			path = "Spectrum Tests";
+			path = "POSIXRegex Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +146,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00B2A441BF3E98F00372163 /* Spectrum.h in Headers */,
 				B00B2A3D1BF3E96400372163 /* gamut_swift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,7 +154,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00B2A451BF3E98F00372163 /* Spectrum.h in Headers */,
 				B00B2A3E1BF3E96400372163 /* gamut_swift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,9 +161,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B005109A1BE97B7B001B3F26 /* Spectrum OSX */ = {
+		B005109A1BE97B7B001B3F26 /* POSIXRegex OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B00510AF1BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "Spectrum OSX" */;
+			buildConfigurationList = B00510AF1BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "POSIXRegex OSX" */;
 			buildPhases = (
 				B00510961BE97B7B001B3F26 /* Sources */,
 				B00510971BE97B7B001B3F26 /* Frameworks */,
@@ -178,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = "Spectrum OSX";
+			name = "POSIXRegex OSX";
 			productName = Currents;
-			productReference = B005109B1BE97B7B001B3F26 /* Spectrum.framework */;
+			productReference = B005109B1BE97B7B001B3F26 /* POSIXRegex.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B00510A41BE97B7B001B3F26 /* Spectrum OSX Tests */ = {
+		B00510A41BE97B7B001B3F26 /* POSIXRegex OSX Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B00510B21BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "Spectrum OSX Tests" */;
+			buildConfigurationList = B00510B21BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "POSIXRegex OSX Tests" */;
 			buildPhases = (
 				B00510A11BE97B7B001B3F26 /* Sources */,
 				B00510A21BE97B7B001B3F26 /* Frameworks */,
@@ -196,14 +192,14 @@
 			dependencies = (
 				B00510A81BE97B7B001B3F26 /* PBXTargetDependency */,
 			);
-			name = "Spectrum OSX Tests";
+			name = "POSIXRegex OSX Tests";
 			productName = CurrentsTests;
-			productReference = B00510A51BE97B7B001B3F26 /* SpectrumTests.xctest */;
+			productReference = B00510A51BE97B7B001B3F26 /* POSIXRegex.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B00510E91BE9952D001B3F26 /* Spectrum iOS */ = {
+		B00510E91BE9952D001B3F26 /* POSIXRegex iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B00510FB1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "Spectrum iOS" */;
+			buildConfigurationList = B00510FB1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "POSIXRegex iOS" */;
 			buildPhases = (
 				B00510E51BE9952D001B3F26 /* Sources */,
 				B00510E61BE9952D001B3F26 /* Frameworks */,
@@ -214,14 +210,14 @@
 			);
 			dependencies = (
 			);
-			name = "Spectrum iOS";
+			name = "POSIXRegex iOS";
 			productName = "Currents iOS";
-			productReference = B00510EA1BE9952D001B3F26 /* Spectrum.framework */;
+			productReference = B00510EA1BE9952D001B3F26 /* POSIXRegex.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B00510F21BE9952D001B3F26 /* Spectrum iOS Tests */ = {
+		B00510F21BE9952D001B3F26 /* POSIXRegex iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B00510FE1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "Spectrum iOS Tests" */;
+			buildConfigurationList = B00510FE1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "POSIXRegex iOS Tests" */;
 			buildPhases = (
 				B00510EF1BE9952D001B3F26 /* Sources */,
 				B00510F01BE9952D001B3F26 /* Frameworks */,
@@ -232,9 +228,9 @@
 			dependencies = (
 				B00510F61BE9952D001B3F26 /* PBXTargetDependency */,
 			);
-			name = "Spectrum iOS Tests";
+			name = "POSIXRegex iOS Tests";
 			productName = "Currents iOSTests";
-			productReference = B00510F31BE9952D001B3F26 /* SpectrumTests.xctest */;
+			productReference = B00510F31BE9952D001B3F26 /* POSIXRegex.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +257,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B00510951BE97B7B001B3F26 /* Build configuration list for PBXProject "Spectrum" */;
+			buildConfigurationList = B00510951BE97B7B001B3F26 /* Build configuration list for PBXProject "POSIXRegex" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -273,10 +269,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B005109A1BE97B7B001B3F26 /* Spectrum OSX */,
-				B00510E91BE9952D001B3F26 /* Spectrum iOS */,
-				B00510A41BE97B7B001B3F26 /* Spectrum OSX Tests */,
-				B00510F21BE9952D001B3F26 /* Spectrum iOS Tests */,
+				B005109A1BE97B7B001B3F26 /* POSIXRegex OSX */,
+				B00510E91BE9952D001B3F26 /* POSIXRegex iOS */,
+				B00510A41BE97B7B001B3F26 /* POSIXRegex OSX Tests */,
+				B00510F21BE9952D001B3F26 /* POSIXRegex iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00B2A4B1BF3E9E000372163 /* Regex.swift in Sources */,
+				B0B0A4F51C09E841005E92B0 /* Regex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00B2A4E1BF3F31A00372163 /* SpectrumTests.swift in Sources */,
+				B0B0A4F71C09E848005E92B0 /* POSIXRegexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00B2A4C1BF3E9E000372163 /* Regex.swift in Sources */,
+				B0B0A4F61C09E841005E92B0 /* Regex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00B2A4F1BF3F31A00372163 /* SpectrumTests.swift in Sources */,
+				B0B0A4F81C09E849005E92B0 /* POSIXRegexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,12 +346,12 @@
 /* Begin PBXTargetDependency section */
 		B00510A81BE97B7B001B3F26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B005109A1BE97B7B001B3F26 /* Spectrum OSX */;
+			target = B005109A1BE97B7B001B3F26 /* POSIXRegex OSX */;
 			targetProxy = B00510A71BE97B7B001B3F26 /* PBXContainerItemProxy */;
 		};
 		B00510F61BE9952D001B3F26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B00510E91BE9952D001B3F26 /* Spectrum iOS */;
+			target = B00510E91BE9952D001B3F26 /* POSIXRegex iOS */;
 			targetProxy = B00510F51BE9952D001B3F26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,13 +454,13 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Spectrum/Info.plist;
+				INFOPLIST_FILE = POSIXRegex/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.SpectrumOSX;
-				PRODUCT_MODULE_NAME = Spectrum;
-				PRODUCT_NAME = Spectrum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.POSIXRegex;
+				PRODUCT_MODULE_NAME = POSIXRegex;
+				PRODUCT_NAME = POSIXRegex;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Dependencies";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -482,13 +478,13 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Spectrum/Info.plist;
+				INFOPLIST_FILE = POSIXRegex/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.SpectrumOSX;
-				PRODUCT_MODULE_NAME = Spectrum;
-				PRODUCT_NAME = Spectrum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.POSIXRegex;
+				PRODUCT_MODULE_NAME = POSIXRegex;
+				PRODUCT_NAME = POSIXRegex;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Dependencies";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -500,10 +496,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Spectrum Tests/Info.plist";
+				INFOPLIST_FILE = "POSIXRegex Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.SpectrumOSXTests;
-				PRODUCT_NAME = SpectrumTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.POSIXRegexTests;
+				PRODUCT_NAME = POSIXRegexTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -513,10 +509,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Spectrum Tests/Info.plist";
+				INFOPLIST_FILE = "POSIXRegex Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.SpectrumOSXTests;
-				PRODUCT_NAME = SpectrumTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.POSIXRegexTests;
+				PRODUCT_NAME = POSIXRegexTests;
 			};
 			name = Release;
 		};
@@ -530,13 +526,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Spectrum/Info.plist;
+				INFOPLIST_FILE = POSIXRegex/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.SpectrumiOS;
-				PRODUCT_MODULE_NAME = Spectrum;
-				PRODUCT_NAME = Spectrum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.POSIXRegex;
+				PRODUCT_MODULE_NAME = POSIXRegex;
+				PRODUCT_NAME = POSIXRegex;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Dependencies";
@@ -555,13 +551,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Spectrum/Info.plist;
+				INFOPLIST_FILE = POSIXRegex/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.SpectrumiOS;
-				PRODUCT_MODULE_NAME = Spectrum;
-				PRODUCT_NAME = Spectrum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.POSIXRegex;
+				PRODUCT_MODULE_NAME = POSIXRegex;
+				PRODUCT_NAME = POSIXRegex;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Dependencies";
@@ -576,11 +572,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Spectrum Tests/Info.plist";
+				INFOPLIST_FILE = "POSIXRegex Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.SpectrumiOSTests;
-				PRODUCT_NAME = SpectrumTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.POSIXRegexTests;
+				PRODUCT_NAME = POSIXRegexTests;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -591,11 +587,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Spectrum Tests/Info.plist";
+				INFOPLIST_FILE = "POSIXRegex Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.SpectrumiOSTests;
-				PRODUCT_NAME = SpectrumTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.POSIXRegexTests;
+				PRODUCT_NAME = POSIXRegexTests;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -604,7 +600,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B00510951BE97B7B001B3F26 /* Build configuration list for PBXProject "Spectrum" */ = {
+		B00510951BE97B7B001B3F26 /* Build configuration list for PBXProject "POSIXRegex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B00510AD1BE97B7B001B3F26 /* Debug */,
@@ -613,7 +609,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B00510AF1BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "Spectrum OSX" */ = {
+		B00510AF1BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "POSIXRegex OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B00510B01BE97B7B001B3F26 /* Debug */,
@@ -622,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B00510B21BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "Spectrum OSX Tests" */ = {
+		B00510B21BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "POSIXRegex OSX Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B00510B31BE97B7B001B3F26 /* Debug */,
@@ -631,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B00510FB1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "Spectrum iOS" */ = {
+		B00510FB1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "POSIXRegex iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B00510FC1BE9952D001B3F26 /* Debug */,
@@ -640,7 +636,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B00510FE1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "Spectrum iOS Tests" */ = {
+		B00510FE1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "POSIXRegex iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B00510FF1BE9952D001B3F26 /* Debug */,

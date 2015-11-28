@@ -1,4 +1,4 @@
-// SpectrumTests.swift
+// POSIXRegexTests.swift
 //
 // The MIT License (MIT)
 //
@@ -23,9 +23,9 @@
 // SOFTWARE.
 
 import XCTest
-import Spectrum
+import POSIXRegex
 
-class SpectrumTests: XCTestCase {
+class POSIXRegexTests: XCTestCase {
     func testInvalidRegex() {
         var called = false
         do {

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-               BuildableName = "Spectrum.framework"
-               BlueprintName = "Spectrum OSX"
-               ReferencedContainer = "container:Spectrum.xcodeproj">
+               BuildableName = "POSIXRegex.framework"
+               BlueprintName = "POSIXRegex OSX"
+               ReferencedContainer = "container:POSIXRegex.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B00510A41BE97B7B001B3F26"
-               BuildableName = "SpectrumTests.xctest"
-               BlueprintName = "Spectrum OSX Tests"
-               ReferencedContainer = "container:Spectrum.xcodeproj">
+               BuildableName = "POSIXRegex.xctest"
+               BlueprintName = "POSIXRegex OSX Tests"
+               ReferencedContainer = "container:POSIXRegex.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Spectrum.framework"
-            BlueprintName = "Spectrum OSX"
-            ReferencedContainer = "container:Spectrum.xcodeproj">
+            BuildableName = "POSIXRegex.framework"
+            BlueprintName = "POSIXRegex OSX"
+            ReferencedContainer = "container:POSIXRegex.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Spectrum.framework"
-            BlueprintName = "Spectrum OSX"
-            ReferencedContainer = "container:Spectrum.xcodeproj">
+            BuildableName = "POSIXRegex.framework"
+            BlueprintName = "POSIXRegex OSX"
+            ReferencedContainer = "container:POSIXRegex.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Spectrum.framework"
-            BlueprintName = "Spectrum OSX"
-            ReferencedContainer = "container:Spectrum.xcodeproj">
+            BuildableName = "POSIXRegex.framework"
+            BlueprintName = "POSIXRegex OSX"
+            ReferencedContainer = "container:POSIXRegex.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
