@@ -86,7 +86,8 @@ public final class Regex {
         return true
     }
 
-    public func groups(var string: String, options: MatchOptions = []) -> [String] {
+    public func groups(string: String, options: MatchOptions = []) -> [String] {
+        var string = string
         let maxMatches = 10
         var groups = [String]()
 
@@ -112,7 +113,8 @@ public final class Regex {
         return groups
     }
 
-    public func replace(var string: String, withTemplate template: String, options: MatchOptions = []) -> String {
+    public func replace(string: String, withTemplate template: String, options: MatchOptions = []) -> String {
+        var string = string
         let maxMatches = 10
         var totalReplacedString: String = ""
 
