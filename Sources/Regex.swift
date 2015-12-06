@@ -22,7 +22,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Gamut
+#if os(Linux)
+    import Glibc
+#else
+    import Darwin.C
+#endif
 
 struct RegexError : ErrorType {
     let description: String
@@ -44,11 +48,11 @@ public final class Regex {
             self.rawValue = rawValue
         }
 
-        public static let Basic =            RegexOptions(rawValue: REG_BASIC)
-        public static let Extended =         RegexOptions(rawValue: REG_EXTENDED)
-        public static let CaseInsensitive =  RegexOptions(rawValue: REG_ICASE)
-        public static let ResultOnly =       RegexOptions(rawValue: REG_NOSUB)
-        public static let NewLineSensitive = RegexOptions(rawValue: REG_NEWLINE)
+        public static let Basic =            RegexOptions(rawValue: 0)
+        public static let Extended =         RegexOptions(rawValue: 1)
+        public static let CaseInsensitive =  RegexOptions(rawValue: 2)
+        public static let ResultOnly =       RegexOptions(rawValue: 8)
+        public static let NewLineSensitive = RegexOptions(rawValue: 4)
     }
 
     public struct MatchOptions: OptionSetType {
@@ -80,7 +84,7 @@ public final class Regex {
         var regexMatches = [regmatch_t](count: 1, repeatedValue: regmatch_t())
         let result = regexec(&preg, string, regexMatches.count, &regexMatches, options.rawValue)
 
-        if result == REG_NOMATCH {
+        if result == 1 {
             return false
         }
 
@@ -96,7 +100,7 @@ public final class Regex {
             var regexMatches = [regmatch_t](count: maxMatches, repeatedValue: regmatch_t())
             let result = regexec(&preg, string, regexMatches.count, &regexMatches, options.rawValue)
 
-            if result == REG_NOMATCH {
+            if result == 1 {
                 break
             }
 
@@ -123,7 +127,7 @@ public final class Regex {
             var regexMatches = [regmatch_t](count: maxMatches, repeatedValue: regmatch_t())
             let result = regexec(&preg, string, regexMatches.count, &regexMatches, options.rawValue)
 
-            if result == REG_NOMATCH {
+            if result == 1 {
                 break
             }
 
