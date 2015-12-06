@@ -10,7 +10,6 @@ POSIXRegex
 
 ## Features
 
-- [x] No `Foundation` dependency (**Linux ready**)
 - [x] Matches
 - [x] Groups
 - [x] Replace
