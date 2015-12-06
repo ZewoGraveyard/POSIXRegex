@@ -27,7 +27,8 @@ import Gamut
 struct RegexError : ErrorType {
     let description: String
 
-    static func errorFromResult(result: Int32, var preg: regex_t) -> RegexError {
+    static func errorFromResult(result: Int32, preg: regex_t) -> RegexError {
+        var preg = preg
         var buffer = [Int8](count: Int(BUFSIZ), repeatedValue: 0)
         regerror(result, &preg, &buffer, buffer.count)
         let description = String.fromCString(buffer)!
