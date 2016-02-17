@@ -22,13 +22,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#if os(Linux)
-    import Glibc
-#else
-    import Darwin.C
-#endif
+@_exported import Data
 
-struct RegexError : ErrorType {
+struct RegexError: ErrorType {
     let description: String
 
     static func errorFromResult(result: Int32, preg: regex_t) -> RegexError {
@@ -104,15 +100,22 @@ public final class Regex {
                 break
             }
 
-            for var j = 1; regexMatches[j].rm_so != -1; j++ {
+            var j = 1
+
+            while regexMatches[j].rm_so != -1 {
                 let start = Int(regexMatches[j].rm_so)
                 let end = Int(regexMatches[j].rm_eo)
                 let match = string[string.startIndex.advancedBy(start) ..<  string.startIndex.advancedBy(end)]
                 groups.append(match)
+                j += 1
             }
 
             let offset = Int(regexMatches[0].rm_eo)
-            string = string[string.startIndex.advancedBy(offset) ..< string.endIndex]
+            if let offsetString = String(string.utf8[string.utf8.startIndex.advancedBy(offset) ..< string.utf8.endIndex]) {
+                string = offsetString
+            } else {
+                break
+            }
         }
 
         return groups
@@ -134,18 +137,25 @@ public final class Regex {
             let start = Int(regexMatches[0].rm_so)
             let end = Int(regexMatches[0].rm_eo)
 
-            var replacedString = string
-            replacedString.replaceRange(string.startIndex.advancedBy(start) ..<  string.startIndex.advancedBy(end), with: template)
+            var replacedStringArray = Array<UInt8>(string.utf8)
+            let templateArray = Array<UInt8>(template.utf8)
+            replacedStringArray.replaceRange(start ..<  end, with: templateArray)
+
+            guard let _replacedString = try? String(data: Data(bytes: replacedStringArray)) else {
+                break
+            }
+
+            var replacedString = _replacedString
 
             let templateDelta = template.utf8.count - (end - start)
-            let templateDeltaIndex = replacedString.startIndex.advancedBy(Int(end + templateDelta))
+            let templateDeltaIndex = replacedString.utf8.startIndex.advancedBy(Int(end + templateDelta))
 
-            replacedString = replacedString[replacedString.startIndex ..< templateDeltaIndex]
+            replacedString = String(replacedString.utf8[replacedString.utf8.startIndex ..< templateDeltaIndex])
 
             totalReplacedString += replacedString
-            string = string[string.startIndex.advancedBy(end) ..< string.endIndex]
+            string = String(string.utf8[string.utf8.startIndex.advancedBy(end) ..< string.utf8.endIndex])
         }
-        
+
         return totalReplacedString + string
     }
 }
