@@ -24,20 +24,20 @@
 
 @_exported import Data
 
-struct RegexError: ErrorType {
+struct RegexError: ErrorProtocol {
     let description: String
 
     static func errorFromResult(result: Int32, preg: regex_t) -> RegexError {
         var preg = preg
-        var buffer = [Int8](count: Int(BUFSIZ), repeatedValue: 0)
+        var buffer = [Int8](repeating: 0, count: Int(BUFSIZ))
         regerror(result, &preg, &buffer, buffer.count)
-        let description = String.fromCString(buffer)!
+        let description = String(validatingUTF8: buffer)!
         return RegexError(description: description)
     }
 }
 
 public final class Regex {
-    public struct RegexOptions: OptionSetType {
+    public struct RegexOptions: OptionSet {
         public let rawValue: Int32
 
         public init(rawValue: Int32) {
@@ -51,7 +51,7 @@ public final class Regex {
         public static let NewLineSensitive = RegexOptions(rawValue: 4)
     }
 
-    public struct MatchOptions: OptionSetType {
+    public struct MatchOptions: OptionSet {
         public let rawValue: Int32
 
         public init(rawValue: Int32) {
@@ -77,7 +77,7 @@ public final class Regex {
     }
 
     public func matches(string: String, options: MatchOptions = []) -> Bool {
-        var regexMatches = [regmatch_t](count: 1, repeatedValue: regmatch_t())
+        var regexMatches = [regmatch_t](repeating: regmatch_t(), count: 1)
         let result = regexec(&preg, string, regexMatches.count, &regexMatches, options.rawValue)
 
         if result == 1 {
@@ -93,7 +93,7 @@ public final class Regex {
         var groups = [String]()
 
         while true {
-            var regexMatches = [regmatch_t](count: maxMatches, repeatedValue: regmatch_t())
+            var regexMatches = [regmatch_t](repeating: regmatch_t(), count: maxMatches)
             let result = regexec(&preg, string, regexMatches.count, &regexMatches, options.rawValue)
 
             if result == 1 {
@@ -105,13 +105,13 @@ public final class Regex {
             while regexMatches[j].rm_so != -1 {
                 let start = Int(regexMatches[j].rm_so)
                 let end = Int(regexMatches[j].rm_eo)
-                let match = string[string.startIndex.advancedBy(start) ..<  string.startIndex.advancedBy(end)]
+                let match = string[string.startIndex.advanced(by: start) ..<  string.startIndex.advanced(by: end)]
                 groups.append(match)
                 j += 1
             }
 
             let offset = Int(regexMatches[0].rm_eo)
-            if let offsetString = String(string.utf8[string.utf8.startIndex.advancedBy(offset) ..< string.utf8.endIndex]) {
+            if let offsetString = String(string.utf8[string.utf8.startIndex.advanced(by: offset) ..< string.utf8.endIndex]) {
                 string = offsetString
             } else {
                 break
@@ -127,7 +127,7 @@ public final class Regex {
         var totalReplacedString: String = ""
 
         while true {
-            var regexMatches = [regmatch_t](count: maxMatches, repeatedValue: regmatch_t())
+            var regexMatches = [regmatch_t](repeating: regmatch_t(), count: maxMatches)
             let result = regexec(&preg, string, regexMatches.count, &regexMatches, options.rawValue)
 
             if result == 1 {
@@ -139,7 +139,7 @@ public final class Regex {
 
             var replacedStringArray = Array<UInt8>(string.utf8)
             let templateArray = Array<UInt8>(template.utf8)
-            replacedStringArray.replaceRange(start ..<  end, with: templateArray)
+            replacedStringArray.replaceSubrange(start ..<  end, with: templateArray)
 
             guard let _replacedString = try? String(data: Data(bytes: replacedStringArray)) else {
                 break
@@ -148,12 +148,12 @@ public final class Regex {
             var replacedString = _replacedString
 
             let templateDelta = template.utf8.count - (end - start)
-            let templateDeltaIndex = replacedString.utf8.startIndex.advancedBy(Int(end + templateDelta))
+            let templateDeltaIndex = replacedString.utf8.startIndex.advanced(by: Int(end + templateDelta))
 
             replacedString = String(replacedString.utf8[replacedString.utf8.startIndex ..< templateDeltaIndex])
 
             totalReplacedString += replacedString
-            string = String(string.utf8[string.utf8.startIndex.advancedBy(end) ..< string.utf8.endIndex])
+            string = String(string.utf8[string.utf8.startIndex.advanced(by: end) ..< string.utf8.endIndex])
         }
 
         return totalReplacedString + string
