@@ -44,11 +44,11 @@ public final class Regex {
             self.rawValue = rawValue
         }
 
-        public static let Basic =            RegexOptions(rawValue: 0)
-        public static let Extended =         RegexOptions(rawValue: 1)
-        public static let CaseInsensitive =  RegexOptions(rawValue: 2)
-        public static let ResultOnly =       RegexOptions(rawValue: 8)
-        public static let NewLineSensitive = RegexOptions(rawValue: 4)
+        public static let basic =            RegexOptions(rawValue: 0)
+        public static let extended =         RegexOptions(rawValue: 1)
+        public static let caseInsensitive =  RegexOptions(rawValue: 2)
+        public static let resultOnly =       RegexOptions(rawValue: 8)
+        public static let newLineSensitive = RegexOptions(rawValue: 4)
     }
 
     public struct MatchOptions: OptionSet {
@@ -64,7 +64,7 @@ public final class Regex {
 
     var preg = regex_t()
 
-    public init(pattern: String, options: RegexOptions = [.Extended]) throws {
+    public init(pattern: String, options: RegexOptions = .extended) throws {
         let result = regcomp(&preg, pattern, options.rawValue)
 
         if result != 0 {
