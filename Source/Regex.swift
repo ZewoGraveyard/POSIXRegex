@@ -22,7 +22,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-@_exported import Data
+@_exported import C7
+@_exported import OperatingSystem
 
 struct RegexError: ErrorProtocol {
     let description: String
