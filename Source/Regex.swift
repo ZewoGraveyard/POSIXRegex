@@ -28,7 +28,7 @@
 struct RegexError: ErrorProtocol {
     let description: String
 
-    static func errorFromResult(result: Int32, preg: regex_t) -> RegexError {
+    static func error(from result: Int32, preg: regex_t) -> RegexError {
         var preg = preg
         var buffer = [Int8](repeating: 0, count: Int(BUFSIZ))
         regerror(result, &preg, &buffer, buffer.count)
@@ -69,7 +69,7 @@ public final class Regex {
         let result = regcomp(&preg, pattern, options.rawValue)
 
         if result != 0 {
-            throw RegexError.errorFromResult(result, preg: preg)
+            throw RegexError.error(from: result, preg: preg)
         }
     }
 
