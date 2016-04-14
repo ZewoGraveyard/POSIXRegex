@@ -77,7 +77,7 @@ public final class Regex {
         regfree(&preg)
     }
 
-    public func matches(string: String, options: MatchOptions = []) -> Bool {
+    public func matches(_ string: String, options: MatchOptions = []) -> Bool {
         var regexMatches = [regmatch_t](repeating: regmatch_t(), count: 1)
         let result = regexec(&preg, string, regexMatches.count, &regexMatches, options.rawValue)
 
@@ -88,7 +88,7 @@ public final class Regex {
         return true
     }
 
-    public func groups(string: String, options: MatchOptions = []) -> [String] {
+    public func groups(_ string: String, options: MatchOptions = []) -> [String] {
         var string = string
         let maxMatches = 10
         var groups = [String]()
@@ -122,7 +122,7 @@ public final class Regex {
         return groups
     }
 
-    public func replace(string: String, withTemplate template: String, options: MatchOptions = []) -> String {
+    public func replace(_ string: String, withTemplate template: String, options: MatchOptions = []) -> String {
         var string = string
         let maxMatches = 10
         var totalReplacedString: String = ""
