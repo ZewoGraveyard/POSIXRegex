@@ -23,7 +23,12 @@
 // SOFTWARE.
 
 @_exported import C7
-@_exported import OperatingSystem
+
+#if os(Linux)
+    @_exported import Glibc
+#else
+    @_exported import Darwin.C
+#endif
 
 struct RegexError: ErrorProtocol {
     let description: String
