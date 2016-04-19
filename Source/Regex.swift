@@ -23,12 +23,17 @@
 // SOFTWARE.
 
 @_exported import C7
-@_exported import OperatingSystem
+
+#if os(Linux)
+    @_exported import Glibc
+#else
+    @_exported import Darwin.C
+#endif
 
 struct RegexError: ErrorProtocol {
     let description: String
 
-    static func errorFromResult(result: Int32, preg: regex_t) -> RegexError {
+    static func error(from result: Int32, preg: regex_t) -> RegexError {
         var preg = preg
         var buffer = [Int8](repeating: 0, count: Int(BUFSIZ))
         regerror(result, &preg, &buffer, buffer.count)
@@ -69,7 +74,7 @@ public final class Regex {
         let result = regcomp(&preg, pattern, options.rawValue)
 
         if result != 0 {
-            throw RegexError.errorFromResult(result, preg: preg)
+            throw RegexError.error(from: result, preg: preg)
         }
     }
 
@@ -77,7 +82,7 @@ public final class Regex {
         regfree(&preg)
     }
 
-    public func matches(string: String, options: MatchOptions = []) -> Bool {
+    public func matches(_ string: String, options: MatchOptions = []) -> Bool {
         var regexMatches = [regmatch_t](repeating: regmatch_t(), count: 1)
         let result = regexec(&preg, string, regexMatches.count, &regexMatches, options.rawValue)
 
@@ -88,7 +93,7 @@ public final class Regex {
         return true
     }
 
-    public func groups(string: String, options: MatchOptions = []) -> [String] {
+    public func groups(_ string: String, options: MatchOptions = []) -> [String] {
         var string = string
         let maxMatches = 10
         var groups = [String]()
@@ -122,7 +127,7 @@ public final class Regex {
         return groups
     }
 
-    public func replace(string: String, withTemplate template: String, options: MatchOptions = []) -> String {
+    public func replace(_ string: String, withTemplate template: String, options: MatchOptions = []) -> String {
         var string = string
         let maxMatches = 10
         var totalReplacedString: String = ""
