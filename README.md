@@ -21,18 +21,18 @@
 ```swift
 import POSIXRegex
 
-let regex = try! Regex(pattern: "hello")
+let regex = try Regex(pattern: "hello")
 regex.matches("hello") // true
 regex.matches("bye") // false
 
-let regex = try! Regex(pattern: "(hello)")
+let regex = try Regex(pattern: "(hello)")
 regex.groups("hello") // ["hello"]
 regex.groups("bye") // []
 
-let regex = try! Regex(pattern: "(hello) (world)")
+let regex = try Regex(pattern: "(hello) (world)")
 let groups = regex.groups("hello world") // ["hello", "world"]
 
-let regex = try! Regex(pattern: "hello")
+let regex = try Regex(pattern: "hello")
 regex.replace("hello world", withTemplate: "bye") // "bye world"
 ```
 
