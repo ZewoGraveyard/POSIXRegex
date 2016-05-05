@@ -111,13 +111,16 @@ public final class Regex {
             while regexMatches[j].rm_so != -1 {
                 let start = Int(regexMatches[j].rm_so)
                 let end = Int(regexMatches[j].rm_eo)
-                let match = string[string.startIndex.advanced(by: start) ..<  string.startIndex.advanced(by: end)]
+                let startIndex = string.index(string.startIndex, offsetBy: start)
+                let endIndex = string.index(string.startIndex, offsetBy: end)
+                let match = string[startIndex ..< endIndex]
                 groups.append(match)
                 j += 1
             }
 
             let offset = Int(regexMatches[0].rm_eo)
-            if let offsetString = String(string.utf8[string.utf8.startIndex.advanced(by: offset) ..< string.utf8.endIndex]) {
+            let startIndex = string.utf8.index(string.utf8.startIndex, offsetBy: offset)
+            if let offsetString = String(string.utf8[startIndex ..< string.utf8.endIndex]) {
                 string = offsetString
             } else {
                 break
@@ -154,12 +157,14 @@ public final class Regex {
             var replacedString = _replacedString
 
             let templateDelta = template.utf8.count - (end - start)
-            let templateDeltaIndex = replacedString.utf8.startIndex.advanced(by: Int(end + templateDelta))
+            let offset = Int(end + templateDelta)
+            let templateDeltaIndex = replacedString.utf8.index(replacedString.utf8.startIndex, offsetBy: offset)
 
             replacedString = String(replacedString.utf8[replacedString.utf8.startIndex ..< templateDeltaIndex])
 
             totalReplacedString += replacedString
-            string = String(string.utf8[string.utf8.startIndex.advanced(by: end) ..< string.utf8.endIndex])
+            let startIndex = string.utf8.index(string.utf8.startIndex, offsetBy: end)
+            string = String(string.utf8[startIndex ..< string.utf8.endIndex])
         }
 
         return totalReplacedString + string
