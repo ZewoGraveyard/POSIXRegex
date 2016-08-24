@@ -1,7 +1,7 @@
 #if os(Linux)
 
 import XCTest
-@testable import POSIXRegexTestSuite
+@testable import POSIXRegexTests
 
 XCTMain([
     testCase(POSIXRegexTests.allTests)

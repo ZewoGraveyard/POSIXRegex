@@ -1,5 +1,5 @@
 import XCTest
-import POSIXRegex
+@testable import POSIXRegex
 
 class POSIXRegexTests: XCTestCase {
     func testInvalidRegex() {
@@ -57,7 +57,7 @@ class POSIXRegexTests: XCTestCase {
 }
 
 extension POSIXRegexTests {
-    static var allTests: [(String, POSIXRegexTests -> () throws -> Void)] {
+    static var allTests: [(String, (POSIXRegexTests) -> () throws -> Void)] {
         return [
            ("testInvalidRegex", testInvalidRegex),
            ("testMatches", testMatches),

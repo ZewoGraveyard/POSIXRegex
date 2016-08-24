@@ -30,7 +30,7 @@
     @_exported import Darwin.C
 #endif
 
-struct RegexError: ErrorProtocol {
+struct RegexError: Error {
     let description: String
 
     static func error(from result: Int32, preg: regex_t) -> RegexError {
@@ -159,12 +159,12 @@ public final class Regex {
             let templateDelta = template.utf8.count - (end - start)
             let offset = Int(end + templateDelta)
             let templateDeltaIndex = replacedString.utf8.index(replacedString.utf8.startIndex, offsetBy: offset)
-
-            replacedString = String(replacedString.utf8[replacedString.utf8.startIndex ..< templateDeltaIndex])
+            
+            replacedString = String(describing: replacedString.utf8[replacedString.utf8.startIndex ..< templateDeltaIndex])
 
             totalReplacedString += replacedString
             let startIndex = string.utf8.index(string.utf8.startIndex, offsetBy: end)
-            string = String(string.utf8[startIndex ..< string.utf8.endIndex])
+            string = String(describing: string.utf8[startIndex ..< string.utf8.endIndex])
         }
 
         return totalReplacedString + string
